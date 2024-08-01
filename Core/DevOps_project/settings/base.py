@@ -1,6 +1,6 @@
 
 SECRET_KEY = NotImplemented
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -52,8 +52,14 @@ WSGI_APPLICATION = 'Core.DevOps_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/eea-10/master_thesis/DevOps_project/db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cooking_core',
+        'USER': 'cooking_core',
+        'PASSWORD': 'cooking_core',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'ATOMIC_REQUESTS': True,
+        'CONN_MAX_AGE': 600,
     }
 }
 

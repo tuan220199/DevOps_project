@@ -4,19 +4,19 @@ install:
 
 .PHONY: migrate
 migrate:
-	poetry run python3 -m Core.manage migrate
+	poetry run python -m Core.manage migrate
 
 .PHONY: migrations
 migrations:
-	poetry run python3 -m Core.manage makemigrations
+	poetry run python -m Core.manage makemigrations
 
 .PHONY: run-server
 run-server:
-	poetry run python3 -m Core.manage runserver
+	poetry run python -m Core.manage runserver
 
 .PHONY: superuser
 superuser:
-	poetry run python3 -m Core.manage createsuperuser
+	poetry run python -m Core.manage createsuperuser
 
 .PHONY: update
 update: install migrate ;
